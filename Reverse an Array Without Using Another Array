@@ -1,0 +1,55 @@
+# Reverse an Array Without Using Another Array (C Program)
+
+Overview
+
+This program reverses the elements of an array **in-place**, meaning **without using any additional array**. The reversal is done by swapping elements from the beginning and end of the array.
+
+This is a very important program for **understanding array manipulation**, **two-pointer technique**, and is frequently asked in **C programming labs and interviews**.
+
+ Algorithm (In-Place Reversal)
+
+1. Read the number of elements `n`.
+2. Read `n` elements into the array.
+3. Initialize two indices:
+
+   * `start = 0`
+   * `end = n - 1`
+4. While `start < end`:
+
+   * Swap `arr[start]` and `arr[end]`
+   * Increment `start`
+   * Decrement `end`
+5. Print the reversed array.
+
+
+ Program Logic
+
+* No extra array is used.
+* Only a temporary variable is used for swapping.
+* The array is reversed in the same memory location.
+
+**Time Complexity:** O(n)
+**Space Complexity:** O(1) (Constant extra space)
+
+Input
+
+* Number of elements in the array
+* Elements of the array (integers)
+
+Example Input
+
+```
+5
+10 20 30 40 50
+```
+
+---
+
+Output
+
+* Array elements in reverse order
+
+Example Output
+Reversed array:
+50 40 30 20 10
+
