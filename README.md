@@ -1,1 +1,1 @@
-here is the program for calculator using pass by value and pass by refernce
+here is the programs for data structure of c 
