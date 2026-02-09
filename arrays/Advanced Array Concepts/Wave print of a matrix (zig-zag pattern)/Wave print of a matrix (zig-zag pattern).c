@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int a[10][10], r, c, i, j, key, found = 0;
+    int a[10][10], r, c, i, j;
 
     printf("Enter rows and columns: ");
     scanf("%d %d", &r, &c);
@@ -11,20 +11,16 @@ int main() {
         for(j = 0; j < c; j++)
             scanf("%d", &a[i][j]);
 
-    printf("Enter element to search: ");
-    scanf("%d", &key);
-
-    for(i = 0; i < r; i++) {
-        for(j = 0; j < c; j++) {
-            if(a[i][j] == key) {
-                printf("Element found at (%d, %d)\n", i, j);
-                found = 1;
-            }
+    printf("Wave Print:\n");
+    for(j = 0; j < c; j++) {
+        if(j % 2 == 0) {
+            for(i = 0; i < r; i++)
+                printf("%d ", a[i][j]);
+        } else {
+            for(i = r - 1; i >= 0; i--)
+                printf("%d ", a[i][j]);
         }
     }
-
-    if(!found)
-        printf("Element not found\n");
 
     return 0;
 }
